@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>User Registration</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+	    <p>Customer "<b><span th:text="${firstName}"></span></b> <b><span th:text="${lastName}"></span></b> added successfully!</p>
+		<p/>
+		<p>Your ID is => "<b><span th:text="${id}"></span></b></p>
+		<p>Your USERNAME is => "<b><span th:text="${username}"></span></b></p>
+		
+		<a th:href="@{/}">Go to index Page</a>
+		<p/><p/>
+		<a th:href="@{/listProducts}">See 'Products list'</a>
+		
+	</body>
+</html>

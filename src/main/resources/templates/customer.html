@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Customer information found by Username</h1>
+	
+	<div th:if="${customer == null}">
+    	<p>No customer found.</p>
+	</div>
+	
+	<div th:unless="${customer == null}">
+	    <p>Id: <span th:text="${customer.id}"></span></p>
+	    <p>First Name: <span th:text="${customer.firstName}"></span></p>
+	    <p>Last Name: <span th:text="${customer.lastName}"></span></p>
+	    <p>User name: <span th:text="${customer.username}"></span></p>
+	</div>
+	
+	<p/><p/>
+	<a th:href="@{/customers}">See 'Customers list'</a>
+	
+</body>
+</html>
